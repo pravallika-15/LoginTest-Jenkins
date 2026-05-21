@@ -10,7 +10,12 @@ public class RunTest {
 
     @Test
     public void testValidLogin() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--window-size=1920,1080");
+        WebDriver driver = new ChromeDriver(options);
         try {
             driver.manage().window().maximize();
             driver.get("https://the-internet.herokuapp.com/login");
