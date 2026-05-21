@@ -16,14 +16,11 @@
     </properties>
 
     <dependencies>
-        <!-- Selenium -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.25.0</version>
         </dependency>
-
-        <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -34,7 +31,6 @@
 
     <build>
         <plugins>
-            <!-- Maven Surefire Plugin to run TestNG -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -48,12 +44,3 @@
         </plugins>
     </build>
 </project>
-        <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="LoginTestSuite">
-<test name="LoginTest">
-    <classes>
-        <class name="RunTest"/>
-    </classes>
-</test>
-</suite>
